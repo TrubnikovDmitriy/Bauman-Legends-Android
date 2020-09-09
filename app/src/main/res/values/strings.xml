@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Bauman Legends</string>
+    <string name="title_task">Задание</string>
+    <string name="title_team">Команда</string>
+    <string name="title_info">Инфо</string>
 </resources>
