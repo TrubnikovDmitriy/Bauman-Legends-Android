@@ -1,3 +1,4 @@
 include ':core-ui'
+include ':utils'
 include ':app'
 rootProject.name = "Bauman Legends"
