@@ -1,4 +1,4 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
@@ -9,13 +9,13 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "dv.trubnikov.legends"
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -25,9 +25,8 @@ android {
         }
     }
 
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+    buildFeatures {
+        viewBinding true
     }
 
     kotlinOptions {
@@ -36,32 +35,22 @@ android {
 }
 
 dependencies {
-    implementation project(":feature-login")
-    implementation project(":core-network")
     implementation project(":core-user")
     implementation project(":core-ui")
     implementation project(":utils")
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation "androidx.core:core-ktx:1.3.1"
+    implementation 'androidx.core:core-ktx:1.3.1'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
 
-    implementation "androidx.appcompat:appcompat:1.2.0"
-    implementation "androidx.constraintlayout:constraintlayout:2.0.1"
-    implementation "androidx.annotation:annotation:1.1.0"
-    implementation "com.google.android.material:material:1.2.1"
+    // Retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
-
-    // Lifecycle
-    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
 
     // Navigation
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
-    implementation "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
 
     // Dependency Injection
     implementation "com.google.dagger:hilt-android:$hilt_version"
@@ -69,10 +58,8 @@ dependencies {
     implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hilt_vm_version"
     kapt "androidx.hilt:hilt-compiler:$hilt_vm_version"
 
-    // Unit tests
+    // Tests
     testImplementation "junit:junit:$junit_version"
-
-    // Android tests
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 }

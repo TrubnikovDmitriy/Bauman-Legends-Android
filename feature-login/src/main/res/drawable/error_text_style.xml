@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:top="10dp"
+                android:bottom="10dp"
+                android:right="16dp"
+                android:left="16dp" />
+            <corners android:radius="@dimen/login_form_corner_radius" />
+            <solid android:color="@color/colorErrorLight_a60" />
+            <stroke android:color="@color/colorErrorDark"
+                android:width="4dp" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,24 @@
+<resources>
+    <!-- Login-->
+    <string name="error_empty_login">Пожалуйста, введите логин</string>
+    <string name="error_empty_password">Пожалуйста, введите пароль</string>
+    <string name="error_empty_field">Все поля обязательны для заполнения</string>
+
+    <!-- Registration -->
+    <string name="prompt_login">Логин</string>
+    <string name="prompt_password">Пароль</string>
+    <string name="prompt_first_name">Имя</string>
+    <string name="prompt_last_name">Фамилия</string>
+    <string name="prompt_study_group">Учебная группа</string>
+    <string name="prompt_vk_ref">Ссылка ВК</string>
+
+    <string name="label_login_fragment">Авторизация</string>
+    <string name="label_registration_fragment">Регистрация</string>
+
+    <string name="login_button_sign_in">Войти</string>
+    <string name="login_button_sign_up">Зарегистрироваться</string>
+
+    <string name="fail_to_sign_in">Неверный логин или пароль</string>
+    <string name="response_401">Сначала необходимо авторизоваться</string>
+    <string name="response_5xx">Сервер не отвечает.\nПожалуйста, попробуйте позже</string>
+</resources>

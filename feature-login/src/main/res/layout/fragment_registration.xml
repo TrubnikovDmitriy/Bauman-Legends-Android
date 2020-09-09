@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.registration.RegistrationFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/login_background"
+        tools:ignore="ContentDescription" />
+
+    <FrameLayout
+        android:id="@+id/registration_frame"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.8"
+        android:background="@color/ic_launcher_background"
+        app:layout_constraintBottom_toTopOf="@id/registration_sign_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.65"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintWidth_percent="0.75" >
+
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/login_form_margin"
+        android:layout_marginTop="@dimen/login_form_margin"
+        android:layout_marginBottom="@dimen/login_form_vertical_input_margin"
+        android:background="@drawable/input_text_style"
+        android:hint="@string/prompt_login"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@id/password"
+        app:layout_constraintEnd_toEndOf="@id/registration_frame"
+        app:layout_constraintStart_toStartOf="@id/registration_frame"
+        app:layout_constraintTop_toTopOf="@id/registration_frame"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/login_form_margin"
+        android:layout_marginVertical="@dimen/login_form_vertical_input_margin"
+        android:hint="@string/prompt_password"
+        android:imeActionLabel="@string/prompt_password"
+        android:imeOptions="actionDone"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:background="@drawable/input_text_style"
+        app:layout_constraintBottom_toTopOf="@id/first_name"
+        app:layout_constraintEnd_toEndOf="@id/registration_frame"
+        app:layout_constraintStart_toStartOf="@id/registration_frame"
+        app:layout_constraintTop_toBottomOf="@id/login" />
+
+    <EditText
+        android:id="@+id/first_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/login_form_margin"
+        android:layout_marginVertical="@dimen/login_form_vertical_input_margin"
+        android:background="@drawable/input_text_style"
+        android:hint="@string/prompt_first_name"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@id/last_name"
+        app:layout_constraintEnd_toEndOf="@id/registration_frame"
+        app:layout_constraintStart_toStartOf="@id/registration_frame"
+        app:layout_constraintTop_toBottomOf="@id/password" />
+
+    <EditText
+        android:id="@+id/last_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/login_form_margin"
+        android:layout_marginVertical="@dimen/login_form_vertical_input_margin"
+        android:background="@drawable/input_text_style"
+        android:hint="@string/prompt_last_name"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@id/study_group"
+        app:layout_constraintEnd_toEndOf="@id/registration_frame"
+        app:layout_constraintStart_toStartOf="@id/registration_frame"
+        app:layout_constraintTop_toBottomOf="@id/first_name" />
+
+    <EditText
+        android:id="@+id/study_group"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/login_form_margin"
+        android:layout_marginVertical="@dimen/login_form_vertical_input_margin"
+        android:background="@drawable/input_text_style"
+        android:hint="@string/prompt_study_group"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/last_name"
+        app:layout_constraintBottom_toTopOf="@id/vk_ref"
+        app:layout_constraintEnd_toEndOf="@id/registration_frame"
+        app:layout_constraintStart_toStartOf="@id/registration_frame" />
+
+    <EditText
+        android:id="@+id/vk_ref"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/login_form_margin"
+        android:layout_marginVertical="@dimen/login_form_vertical_input_margin"
+        android:background="@drawable/input_text_style"
+        android:hint="@string/prompt_vk_ref"
+        android:importantForAutofill="no"
+        android:inputType="textUri"
+        app:layout_constraintTop_toBottomOf="@id/study_group"
+        app:layout_constraintBottom_toTopOf="@id/button_sign_up"
+        app:layout_constraintEnd_toEndOf="@id/registration_frame"
+        app:layout_constraintStart_toStartOf="@id/registration_frame" />
+
+    <TextView
+        android:id="@+id/error_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="48dp"
+        android:background="@drawable/error_text_style"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/colorErrorText"
+        android:textSize="@dimen/login_error_text_size"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/registration_sign_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registration_frame"
+        tools:text="@string/fail_to_sign_in" />
+
+    <Button
+        android:id="@+id/button_sign_up"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/login_form_margin"
+        android:text="@string/login_button_sign_up"
+        app:layout_constraintBottom_toBottomOf="@+id/registration_frame"
+        app:layout_constraintEnd_toEndOf="@id/registration_frame"
+        app:layout_constraintStart_toStartOf="@id/registration_frame" />
+
+    <ImageView
+        android:id="@+id/registration_sign_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:paddingBottom="32dp"
+        android:src="@drawable/legends_sign"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:viewBindingIgnore="true" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

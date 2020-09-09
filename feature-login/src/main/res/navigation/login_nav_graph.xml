@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_nav_graph"
+    app:startDestination="@id/navigation_login"
+    tools:ignore="UnusedNavigation">
+    <!--Lint error: https://issuetracker.google.com/issues/134078644-->
+
+    <fragment
+        android:id="@+id/navigation_login"
+        android:name="dv.trubnikov.legends.feature_login.presentation.login.LoginFragment"
+        android:label="@string/label_login_fragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_from_login_to_registration"
+            app:destination="@id/navigation_registration" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_registration"
+        android:name="dv.trubnikov.legends.feature_login.presentation.registration.RegistrationFragment"
+        android:label="@string/label_registration_fragment"
+        tools:layout="@layout/fragment_registration">
+    </fragment>
+
+</navigation>
