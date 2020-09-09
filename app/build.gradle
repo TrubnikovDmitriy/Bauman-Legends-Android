@@ -36,6 +36,7 @@ android {
 }
 
 dependencies {
+    implementation project(":core-network")
     implementation project(":core-ui")
     implementation project(":utils")
 
@@ -46,6 +47,7 @@ dependencies {
     implementation "androidx.constraintlayout:constraintlayout:2.0.1"
     implementation "androidx.annotation:annotation:1.1.0"
     implementation "com.google.android.material:material:1.2.1"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
 
     // Lifecycle
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
