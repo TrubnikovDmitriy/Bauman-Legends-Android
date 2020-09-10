@@ -1,6 +1,5 @@
+include ':core-api'
 include ':core-models'
-include ':api:api-team'
-include ':api:api-user'
 include ':feature-team'
 include ':feature-login'
 include ':core-credential'

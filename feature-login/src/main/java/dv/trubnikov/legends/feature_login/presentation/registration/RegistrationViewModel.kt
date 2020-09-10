@@ -10,7 +10,9 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import dv.trubnikov.legends.feature_login.R
 import dv.trubnikov.legends.feature_login.domain.interactors.SignUpInteractor
 import dv.trubnikov.legends.utils.domain.Result
-import kotlinx.coroutines.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class RegistrationViewModel @ViewModelInject constructor(
     @ApplicationContext private val context: Context,

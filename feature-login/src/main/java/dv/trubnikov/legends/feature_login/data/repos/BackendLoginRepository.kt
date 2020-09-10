@@ -2,26 +2,24 @@ package dv.trubnikov.legends.feature_login.data.repos
 
 import android.content.Context
 import dagger.hilt.android.qualifiers.ApplicationContext
+import dv.trubnikov.legends.core_api.user.dto.from.UserDto
+import dv.trubnikov.legends.core_models.user.UserData
 import dv.trubnikov.legends.feature_login.R
 import dv.trubnikov.legends.feature_login.domain.LoginRepository
 import dv.trubnikov.legends.utils.domain.Result
 import dv.trubnikov.legends.utils.network.ErrorMessageParser
 import dv.trubnikov.legends.utils.network.HttpStatusCode
-import dv.trubnikov.legends.api.user.api.UserApi
-import dv.trubnikov.legends.api.user.dto.from.UserDto
-import dv.trubnikov.legends.api.user.dto.to.SignInDto
-import dv.trubnikov.legends.api.user.dto.to.SignUpDto
-import dv.trubnikov.legends.core_models.user.UserData
 import retrofit2.Response
 import javax.inject.Inject
 
 class BackendLoginRepository @Inject constructor(
     @ApplicationContext private val context: Context,
-    private val userApi: UserApi
+    private val userApi: dv.trubnikov.legends.core_api.user.api.UserApi
 ) : LoginRepository {
 
     override suspend fun signIn(login: String, password: String): Result<UserData> {
-        val dto = SignInDto(login = login, password = password)
+        val dto =
+            dv.trubnikov.legends.core_api.user.dto.to.SignInDto(login = login, password = password)
         val response = userApi.signIn(dto)
         return handleResponse(response) {
             val message = when(it.code()) {
@@ -40,7 +38,7 @@ class BackendLoginRepository @Inject constructor(
         group: String,
         vkUri: String
     ): Result<UserData> {
-        val dto = SignUpDto(
+        val dto = dv.trubnikov.legends.core_api.user.dto.to.SignUpDto(
             login = login,
             password = password,
             firstName = firstName,

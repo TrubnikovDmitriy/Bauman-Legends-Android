@@ -6,9 +6,9 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ApplicationComponent
 import dagger.hilt.android.qualifiers.ApplicationContext
+import dv.trubnikov.legends.core_api.user.api.UserApi
 import dv.trubnikov.legends.feature_login.data.repos.BackendLoginRepository
 import dv.trubnikov.legends.feature_login.domain.LoginRepository
-import dv.trubnikov.legends.api.user.api.UserApi
 import javax.inject.Singleton
 
 @Module
