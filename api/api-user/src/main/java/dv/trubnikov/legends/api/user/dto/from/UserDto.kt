@@ -1,4 +1,4 @@
-package dv.trubnikov.legends.feature_login.data.dto
+package dv.trubnikov.legends.api.user.dto.from
 
 import com.google.gson.annotations.SerializedName
 import dv.trubnikov.legends.core_auth.UserData

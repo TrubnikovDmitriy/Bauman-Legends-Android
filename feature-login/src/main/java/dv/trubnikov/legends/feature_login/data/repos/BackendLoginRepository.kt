@@ -1,28 +1,28 @@
-package dv.trubnikov.legends.feature_login.data
+package dv.trubnikov.legends.feature_login.data.repos
 
 import android.content.Context
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dv.trubnikov.legends.core_auth.UserData
 import dv.trubnikov.legends.feature_login.R
-import dv.trubnikov.legends.feature_login.data.api.LoginApi
-import dv.trubnikov.legends.feature_login.data.dto.SignInDto
-import dv.trubnikov.legends.feature_login.data.dto.SignUpDto
-import dv.trubnikov.legends.feature_login.data.dto.UserDto
 import dv.trubnikov.legends.feature_login.domain.LoginRepository
+import dv.trubnikov.legends.utils.domain.Result
 import dv.trubnikov.legends.utils.network.ErrorMessageParser
 import dv.trubnikov.legends.utils.network.HttpStatusCode
-import dv.trubnikov.legends.utils.domain.Result
+import dv.trubnikov.legends.api.user.api.UserApi
+import dv.trubnikov.legends.api.user.dto.from.UserDto
+import dv.trubnikov.legends.api.user.dto.to.SignInDto
+import dv.trubnikov.legends.api.user.dto.to.SignUpDto
 import retrofit2.Response
 import javax.inject.Inject
 
 class BackendLoginRepository @Inject constructor(
     @ApplicationContext private val context: Context,
-    private val loginApi: LoginApi
+    private val userApi: UserApi
 ) : LoginRepository {
 
     override suspend fun signIn(login: String, password: String): Result<UserData> {
         val dto = SignInDto(login = login, password = password)
-        val response = loginApi.signIn(dto)
+        val response = userApi.signIn(dto)
         return handleResponse(response) {
             val message = when(it.code()) {
                 HttpStatusCode._400.code -> context.getString(R.string.fail_to_sign_in)
@@ -48,7 +48,7 @@ class BackendLoginRepository @Inject constructor(
             studyGroup = group,
             vkUri = vkUri
         )
-        val response = loginApi.signUp(dto)
+        val response = userApi.signUp(dto)
         return handleResponse(response) {
             val message = when(it.code()) {
                 HttpStatusCode._400.code -> ErrorMessageParser.parse(it.errorBody()!!.string())
