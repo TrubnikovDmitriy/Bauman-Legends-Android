@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/navigation_team"
-        android:name="dv.trubnikov.legends.feature_team.FullscreenFragment"
+        android:name="dv.trubnikov.legends.feature_team.TeamFragment"
         android:label="FullscreenFragment"
-        tools:layout="@layout/fragment_fullscreen">
+        tools:layout="@layout/fragment_team">
     </fragment>
 
 

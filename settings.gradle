@@ -1,3 +1,4 @@
+include ':feature-team'
 include ':feature-login'
 include ':core-ui'
 include ':core-user'
