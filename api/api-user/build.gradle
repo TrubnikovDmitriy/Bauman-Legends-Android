@@ -26,7 +26,7 @@ android {
 }
 
 dependencies {
-    implementation project(":core-user")
+    implementation project(":core-models")
     implementation project(":utils")
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"

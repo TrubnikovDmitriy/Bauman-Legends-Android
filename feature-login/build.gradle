@@ -36,7 +36,8 @@ android {
 
 dependencies {
     implementation project(":api:api-user")
-    implementation project(":core-user")
+    implementation project(":core-credential")
+    implementation project(":core-models")
     implementation project(":core-ui")
     implementation project(":utils")
 

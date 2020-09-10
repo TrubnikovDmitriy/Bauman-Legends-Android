@@ -1,8 +1,8 @@
 package dv.trubnikov.legends.api.user.dto.from
 
 import com.google.gson.annotations.SerializedName
-import dv.trubnikov.legends.core_auth.UserData
-import dv.trubnikov.legends.core_auth.UserRole
+import dv.trubnikov.legends.core_models.user.UserData
+import dv.trubnikov.legends.core_models.user.UserRole
 import dv.trubnikov.legends.utils.lang.safetyValueOf
 
 data class UserDto(

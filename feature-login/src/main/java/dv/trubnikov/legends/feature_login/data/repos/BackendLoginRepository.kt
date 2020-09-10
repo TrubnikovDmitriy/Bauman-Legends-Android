@@ -2,7 +2,6 @@ package dv.trubnikov.legends.feature_login.data.repos
 
 import android.content.Context
 import dagger.hilt.android.qualifiers.ApplicationContext
-import dv.trubnikov.legends.core_auth.UserData
 import dv.trubnikov.legends.feature_login.R
 import dv.trubnikov.legends.feature_login.domain.LoginRepository
 import dv.trubnikov.legends.utils.domain.Result
@@ -12,6 +11,7 @@ import dv.trubnikov.legends.api.user.api.UserApi
 import dv.trubnikov.legends.api.user.dto.from.UserDto
 import dv.trubnikov.legends.api.user.dto.to.SignInDto
 import dv.trubnikov.legends.api.user.dto.to.SignUpDto
+import dv.trubnikov.legends.core_models.user.UserData
 import retrofit2.Response
 import javax.inject.Inject
 

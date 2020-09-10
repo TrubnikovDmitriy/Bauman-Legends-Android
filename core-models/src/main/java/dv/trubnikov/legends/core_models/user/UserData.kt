@@ -1,4 +1,4 @@
-package dv.trubnikov.legends.core_auth
+package dv.trubnikov.legends.core_models.user
 
 data class UserData(
     val userId: Long,

@@ -1,6 +1,6 @@
 package dv.trubnikov.legends.feature_login.domain
 
-import dv.trubnikov.legends.core_auth.UserData
+import dv.trubnikov.legends.core_models.user.UserData
 import dv.trubnikov.legends.utils.domain.Result
 
 interface LoginRepository {

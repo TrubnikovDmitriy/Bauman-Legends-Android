@@ -7,7 +7,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.qualifiers.ApplicationContext
-import dv.trubnikov.legends.core_auth.UserData
+import dv.trubnikov.legends.core_models.user.UserData
 import dv.trubnikov.legends.feature_login.R
 import dv.trubnikov.legends.feature_login.domain.interactors.SignInInteractor
 import dv.trubnikov.legends.utils.domain.Result

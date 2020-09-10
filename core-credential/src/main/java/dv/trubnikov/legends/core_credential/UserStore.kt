@@ -1,13 +1,14 @@
-package dv.trubnikov.legends.core_auth
+package dv.trubnikov.legends.core_credential
 
 import android.content.Context
 import dagger.hilt.android.qualifiers.ApplicationContext
+import dv.trubnikov.legends.core_models.user.UserData
+import dv.trubnikov.legends.core_models.user.UserRole
 import dv.trubnikov.legends.utils.android.getLong
 import dv.trubnikov.legends.utils.android.logi
 import dv.trubnikov.legends.utils.domain.Store
 import dv.trubnikov.legends.utils.lang.safetyValueOf
 import javax.inject.Inject
-
 
 class UserStore @Inject constructor(
     @ApplicationContext private val context: Context
@@ -34,7 +35,7 @@ class UserStore @Inject constructor(
             login = prefs.getString(LOGIN, null) ?: return null,
             role = safetyValueOf<UserRole>(prefs.getString(ROLE, null)) ?: return null,
             firstName = prefs.getString(FIRST_NAME, null) ?: return null,
-            lastName = prefs.getString(LAST_NAME, null) ?: return null
+            lastName = prefs.getString(LAST_NAME, null) ?: return null,
         )
     }
 

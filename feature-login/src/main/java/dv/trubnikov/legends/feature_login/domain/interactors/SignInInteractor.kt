@@ -1,7 +1,7 @@
 package dv.trubnikov.legends.feature_login.domain.interactors
 
-import dv.trubnikov.legends.core_auth.UserData
-import dv.trubnikov.legends.core_auth.UserStore
+import dv.trubnikov.legends.core_credential.UserStore
+import dv.trubnikov.legends.core_models.user.UserData
 import dv.trubnikov.legends.feature_login.domain.LoginRepository
 import dv.trubnikov.legends.utils.domain.Result
 import javax.inject.Inject
