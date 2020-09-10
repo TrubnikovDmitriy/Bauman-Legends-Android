@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SansaraProgressBar">
+        <attr name="circleWidth" format="float"/>
+        <attr name="circleSpeed" format="float"/>
+        <attr name="circleSweep" format="float"/>
+        <attr name="circleCount" format="integer"/>
+        <attr name="circleColor" format="reference|color"/>
+        <attr name="circleDirection" format="enum">
+            <enum name="together" value="0"/>
+            <enum name="opposite" value="1"/>
+        </attr>
+    </declare-styleable>
+</resources>
