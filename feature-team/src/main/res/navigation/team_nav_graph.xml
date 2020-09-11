@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/team_nav_graph"
+    app:startDestination="@id/team_onboarding_fragment"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/team_onboarding_fragment"
+        android:name="dv.trubnikov.legends.feature_team.presentation.screens.onboarding.TeamOnBoardingFragment"
+        android:label="@string/nav_label_profile_team"
+        tools:layout="@layout/team_onboarding_fragment" />
+</navigation>

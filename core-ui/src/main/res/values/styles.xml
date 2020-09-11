@@ -7,4 +7,42 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowBackground">@drawable/splash</item>
     </style>
+
+    <style name="LegendsProgressSansaraStyle">
+        <item name="android:layout_width">75dp</item>
+        <item name="android:layout_height">75dp</item>
+        <item name="circleColor">@color/colorPrimary</item>
+        <item name="circleSweep">180</item>
+        <item name="circleSpeed">0.5</item>
+        <item name="circleCount">8</item>
+    </style>
+
+    <style name="LegendsTextStyle">
+        <item name="android:fontFamily">@font/legends_font</item>
+        <item name="android:textSize">23sp</item>
+        <item name="android:textColor">@color/colorSecondaryText</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="LegendsButtonStyle">
+        <item name="android:fontFamily">@font/legends_font</item>
+        <item name="android:textSize">21sp</item>
+        <item name="android:textColor">@color/colorSecondaryText</item>
+        <item name="android:background">@drawable/button_background</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="LegendsEditStyle">
+        <item name="android:background">@drawable/edit_background</item>
+    </style>
+
+    <style name="LegendsCardStyle">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:stateListAnimator">@animator/card_anim_click</item>
+        <item name="cardCornerRadius">@dimen/card_corner_radius</item>
+        <item name="contentPadding">@dimen/container_padding</item>
+    </style>
 </resources>

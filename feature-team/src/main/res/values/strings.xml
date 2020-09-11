@@ -1,2 +1,24 @@
 <resources>
+    <string name="nav_label_profile_team">Профиль команды</string>
+    <string name="nav_label_search_team">Список команд</string>
+
+    <string name="blank_team_name">Название команды должно состоять как минимум из 3 символов</string>
+
+    <string name="you_are_alone_label">Упс! Кажется, у тебя ещё нет команды</string>
+    <string name="create_team_label">Но ты можешь создать свою&#8230;</string>
+    <string name="join_team_label">Или присоединиться к существующей</string>
+
+    <string name="create_team_action">Создать команду</string>
+    <string name="join_team_action">Список команд</string>
+
+    <string name="team_name">Название</string>
+    <string name="create_button">Создать</string>
+    <string name="creating_team_label">Придумайте название команды:</string>
+
+    <string name="team_number_format">Команда №</string>
+    <string name="team_invite_code">Пригласительный код: %s</string>
+    <string name="team_score_format">Баллы: %d</string>
+    <string name="team_money_format">Экстра-баллы: %d</string>
+    <string name="team_name_format">«%s»</string>
+    <string name="invite_code_copied">Пригласительный код скопирован</string>
 </resources>
