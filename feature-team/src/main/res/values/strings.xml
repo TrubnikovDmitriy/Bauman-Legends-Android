@@ -4,16 +4,20 @@
 
     <string name="blank_team_name">Название команды должно состоять как минимум из 3 символов</string>
 
-    <string name="you_are_alone_label">Упс! Кажется, у тебя ещё нет команды</string>
-    <string name="create_team_label">Но ты можешь создать свою&#8230;</string>
-    <string name="join_team_label">Или присоединиться к существующей</string>
+    <string name="onboarding_you_are_alone_label">Упс! Кажется, у тебя ещё нет команды</string>
+    <string name="onboarding_create_label">Но ты можешь создать свою&#8230;</string>
+    <string name="onboarding_join_label">Или присоединиться к существующей</string>
 
     <string name="create_team_action">Создать команду</string>
     <string name="join_team_action">Список команд</string>
 
+    <string name="creating_description">Создание команды</string>
+    <string name="creating_apply_button">Создать</string>
+    <string name="creating_cancel_button">Отмена</string>
+    <string name="creating_hint">Придумайте название</string>
+
     <string name="team_name">Название</string>
     <string name="create_button">Создать</string>
-    <string name="creating_team_label">Придумайте название команды:</string>
 
     <string name="team_number_format">Команда №</string>
     <string name="team_invite_code">Пригласительный код: %s</string>

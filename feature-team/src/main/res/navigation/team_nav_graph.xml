@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/team_nav_graph"
-    app:startDestination="@id/team_onboarding_fragment"
+    app:startDestination="@id/team_create_dialog"
     tools:ignore="UnusedNavigation">
 
     <fragment
@@ -11,4 +11,11 @@
         android:name="dv.trubnikov.legends.feature_team.presentation.screens.onboarding.TeamOnBoardingFragment"
         android:label="@string/nav_label_profile_team"
         tools:layout="@layout/team_onboarding_fragment" />
+
+    <dialog
+        android:id="@+id/team_create_dialog"
+        android:name="dv.trubnikov.legends.feature_team.presentation.screens.create.TeamCreateDialog"
+        android:label="team_create_dialog"
+        tools:layout="@layout/team_create_dialog" />
+
 </navigation>

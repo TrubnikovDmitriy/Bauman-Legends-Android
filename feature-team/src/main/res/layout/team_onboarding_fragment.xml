@@ -15,7 +15,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginBottom="@dimen/container_padding"
         android:layout_marginHorizontal="32dp"
-        android:text="@string/you_are_alone_label"
+        android:text="@string/onboarding_you_are_alone_label"
         android:background="@drawable/button_background" />
 
     <androidx.cardview.widget.CardView
@@ -31,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawablePadding="6dp"
-            android:text="@string/create_team_label"
+            android:text="@string/onboarding_create_label"
             android:textColor="@color/colorSecondaryText"
             app:drawableEndCompat="@drawable/ic_create"
             app:drawableTint="@color/colorPrimary"
@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:drawablePadding="6dp"
             android:gravity="center"
-            android:text="@string/join_team_label"
+            android:text="@string/onboarding_join_label"
             android:textColor="@color/colorSecondaryText"
             app:drawableEndCompat="@drawable/ic_join"
             app:drawableTint="@color/colorPrimary"

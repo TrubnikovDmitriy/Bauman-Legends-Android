@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Base application theme. -->
-    <style name="LegendsTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="LegendsTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -21,7 +21,7 @@
         <item name="android:fontFamily">@font/legends_font</item>
         <item name="android:textSize">23sp</item>
         <item name="android:textColor">@color/colorSecondaryText</item>
-        <item name="android:gravity">center</item>
+        <item name="android:gravity">start|center_vertical</item>
     </style>
 
     <style name="LegendsButtonStyle">
