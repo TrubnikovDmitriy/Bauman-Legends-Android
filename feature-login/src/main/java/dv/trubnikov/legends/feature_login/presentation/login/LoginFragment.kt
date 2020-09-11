@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.OnBackPressedCallback
+import androidx.activity.OnBackPressedDispatcher
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -26,6 +28,7 @@ class LoginFragment : Fragment() {
 
         observeData(binding)
         setUpClickListeners(binding)
+        dispatchBackPressed()
 
         return binding.root
     }
@@ -58,5 +61,14 @@ class LoginFragment : Fragment() {
                 binding.errorText.visibility = View.VISIBLE
             }
         }
+    }
+
+    private fun dispatchBackPressed() {
+        requireActivity().onBackPressedDispatcher.addCallback(
+            viewLifecycleOwner,
+            object : OnBackPressedCallback(true) {
+                override fun handleOnBackPressed() = requireActivity().finish()
+            }
+        )
     }
 }

@@ -1,6 +1,5 @@
 <resources>
     <dimen name="login_form_margin">24dp</dimen>
     <dimen name="login_form_vertical_input_margin">8dp</dimen>
-    <dimen name="login_form_corner_radius">16dp</dimen>
     <dimen name="login_error_text_size">20sp</dimen>
 </resources>

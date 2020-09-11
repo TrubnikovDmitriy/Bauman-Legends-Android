@@ -7,7 +7,7 @@
                 android:bottom="10dp"
                 android:right="16dp"
                 android:left="16dp" />
-            <corners android:radius="@dimen/login_form_corner_radius" />
+            <corners android:radius="16dp" />
             <solid android:color="@android:color/white" />
             <stroke android:color="@color/ic_launcher_background"
                 android:width="4dp" />

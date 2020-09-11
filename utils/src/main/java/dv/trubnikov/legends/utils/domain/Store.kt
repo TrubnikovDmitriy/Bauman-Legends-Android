@@ -23,18 +23,19 @@ abstract class Store<T> {
         }
         set(value) {
             lock.read {
-                if (value == cachedValue) return
+                if (value == cachedValue && isCachedInitialized) return
                 lock.write {
                     writeToPersistence(value)
                     onValueChanged(cachedValue, value)
                     cachedValue = value
+                    isCachedInitialized = true
                 }
             }
         }
 
-    abstract fun readFromPersistence(): T?
+    protected abstract fun readFromPersistence(): T?
 
-    abstract fun writeToPersistence(value: T?)
+    protected abstract fun writeToPersistence(value: T?)
 
     protected open fun onValueChanged(oldValue: T?, newValue: T?): Unit = Unit
 }

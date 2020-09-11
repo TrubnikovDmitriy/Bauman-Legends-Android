@@ -32,13 +32,13 @@
     </FrameLayout>
 
     <EditText
+        style="@style/LegendsEditStyle"
         android:id="@+id/login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/login_form_margin"
         android:layout_marginTop="@dimen/login_form_margin"
         android:layout_marginBottom="@dimen/login_form_vertical_input_margin"
-        android:background="@drawable/input_text_style"
         android:hint="@string/prompt_login"
         android:importantForAutofill="no"
         android:inputType="text"
@@ -49,6 +49,7 @@
         app:layout_constraintVertical_chainStyle="packed" />
 
     <EditText
+        style="@style/LegendsEditStyle"
         android:id="@+id/password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -59,19 +60,18 @@
         android:imeOptions="actionDone"
         android:importantForAutofill="no"
         android:inputType="textPassword"
-        android:background="@drawable/input_text_style"
         app:layout_constraintBottom_toTopOf="@id/first_name"
         app:layout_constraintEnd_toEndOf="@id/registration_frame"
         app:layout_constraintStart_toStartOf="@id/registration_frame"
         app:layout_constraintTop_toBottomOf="@id/login" />
 
     <EditText
+        style="@style/LegendsEditStyle"
         android:id="@+id/first_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/login_form_margin"
         android:layout_marginVertical="@dimen/login_form_vertical_input_margin"
-        android:background="@drawable/input_text_style"
         android:hint="@string/prompt_first_name"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
@@ -81,12 +81,12 @@
         app:layout_constraintTop_toBottomOf="@id/password" />
 
     <EditText
+        style="@style/LegendsEditStyle"
         android:id="@+id/last_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/login_form_margin"
         android:layout_marginVertical="@dimen/login_form_vertical_input_margin"
-        android:background="@drawable/input_text_style"
         android:hint="@string/prompt_last_name"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
@@ -96,12 +96,12 @@
         app:layout_constraintTop_toBottomOf="@id/first_name" />
 
     <EditText
+        style="@style/LegendsEditStyle"
         android:id="@+id/study_group"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/login_form_margin"
         android:layout_marginVertical="@dimen/login_form_vertical_input_margin"
-        android:background="@drawable/input_text_style"
         android:hint="@string/prompt_study_group"
         android:importantForAutofill="no"
         android:inputType="text"
@@ -111,12 +111,12 @@
         app:layout_constraintStart_toStartOf="@id/registration_frame" />
 
     <EditText
+        style="@style/LegendsEditStyle"
         android:id="@+id/vk_ref"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/login_form_margin"
         android:layout_marginVertical="@dimen/login_form_vertical_input_margin"
-        android:background="@drawable/input_text_style"
         android:hint="@string/prompt_vk_ref"
         android:importantForAutofill="no"
         android:inputType="textUri"
