@@ -5,5 +5,6 @@ data class UserData(
     val login: String,
     val role: UserRole,
     val firstName: String,
-    val lastName: String
+    val lastName: String,
+    val studyGroup: String
 )

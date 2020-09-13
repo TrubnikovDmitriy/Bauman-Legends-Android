@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/container_padding"
+    tools:context=".presentation.screens.profile.recyclers.members.TeamMemberViewHolder">
+
+    <ImageView
+        android:id="@+id/captain_icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="6dp"
+        android:src="@drawable/captain_crown_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/primary_text"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/primary_text"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/primary_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:textColor="@color/colorSecondaryText"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/captain_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Трубников Дмитрий" />
+
+    <TextView
+        android:id="@+id/secondary_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@id/captain_icon"
+        app:layout_constraintTop_toBottomOf="@id/primary_text"
+        tools:layout_editor_absoluteX="16dp"
+        tools:text="\@trubnikovdv, РЛ1-13" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

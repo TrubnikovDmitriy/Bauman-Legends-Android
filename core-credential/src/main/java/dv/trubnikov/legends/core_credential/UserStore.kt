@@ -21,6 +21,7 @@ class UserStore @Inject constructor(
         private const val ROLE              = "$USER_PREFERENCES.role"
         private const val FIRST_NAME        = "$USER_PREFERENCES.first_name"
         private const val LAST_NAME         = "$USER_PREFERENCES.last_name"
+        private const val STUDY_GROUP       = "$USER_PREFERENCES.study_group"
     }
 
 
@@ -36,6 +37,7 @@ class UserStore @Inject constructor(
             role = safetyValueOf<UserRole>(prefs.getString(ROLE, null)) ?: return null,
             firstName = prefs.getString(FIRST_NAME, null) ?: return null,
             lastName = prefs.getString(LAST_NAME, null) ?: return null,
+            studyGroup = prefs.getString(STUDY_GROUP, null) ?: return null
         )
     }
 
@@ -47,12 +49,14 @@ class UserStore @Inject constructor(
                 putString(ROLE, value.role.name)
                 putString(FIRST_NAME, value.firstName)
                 putString(LAST_NAME, value.lastName)
+                putString(STUDY_GROUP, value.studyGroup)
             } else {
                 remove(ID)
                 remove(LOGIN)
                 remove(ROLE)
                 remove(FIRST_NAME)
                 remove(LAST_NAME)
+                remove(STUDY_GROUP)
             }
         }.apply()
     }

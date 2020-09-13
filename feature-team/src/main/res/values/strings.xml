@@ -16,13 +16,20 @@
     <string name="creating_cancel_button">Отмена</string>
     <string name="creating_hint">Придумайте название</string>
 
+    <string name="profile_score">Баллы</string>
+    <string name="profile_money">Экстра-баллы</string>
+    <string name="profile_code">Пригласительный код</string>
+
+    <string name="profile_score_info">Баллы - это результат вашей команды в общекомандном зачёте. Именно с помощью этих баллов определяется победитель Легенд.</string>
+    <string name="profile_money_info">Экстра-баллы - это дополинтельные баллы, за которые можно купить подсказки в финальном этапе. На итоговый результат они не влияют, тратьте их!</string>
+    <string name="profile_code_info">Сообщите пригласительный код своему товарищу, чтобы он смог вступить в вашу команду.</string>
+
     <string name="team_name">Название</string>
     <string name="create_button">Создать</string>
 
-    <string name="team_number_format">Команда №</string>
-    <string name="team_invite_code">Пригласительный код: %s</string>
-    <string name="team_score_format">Баллы: %d</string>
-    <string name="team_money_format">Экстра-баллы: %d</string>
     <string name="team_name_format">«%s»</string>
     <string name="invite_code_copied">Пригласительный код скопирован</string>
+    <string name="member_info_header">Члены команды</string>
+    <string name="member_full_name">%s %s</string>
+    <string name="member_login_name">\@%s, %s</string>
 </resources>

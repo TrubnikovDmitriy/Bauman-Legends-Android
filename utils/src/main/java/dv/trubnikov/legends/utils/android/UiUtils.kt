@@ -14,10 +14,14 @@ fun View.hideKeyboard() {
     }
 }
 
-fun View.hide() {
-    visibility = View.GONE
+fun View.show(isVisible: Boolean) {
+    if (isVisible) show() else hide()
 }
 
 fun View.show() {
     visibility = View.VISIBLE
+}
+
+fun View.hide() {
+    visibility = View.GONE
 }
