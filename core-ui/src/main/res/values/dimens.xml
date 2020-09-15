@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="container_padding">16dp</dimen>
-    <dimen name="bottom_nav_adjust">64dp</dimen>
     <dimen name="login_form_corner_radius">16dp</dimen>
 
     <dimen name="card_elevation">8dp</dimen>

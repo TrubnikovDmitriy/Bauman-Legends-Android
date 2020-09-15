@@ -2,12 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_task"
+        android:id="@+id/login_nav_graph"
         android:icon="@drawable/ic_task"
         android:title="@string/title_task" />
 
     <item
-        android:id="@+id/navigation_team"
+        android:id="@+id/team_nav_graph"
         android:icon="@drawable/ic_team"
         android:title="@string/title_team" />
 

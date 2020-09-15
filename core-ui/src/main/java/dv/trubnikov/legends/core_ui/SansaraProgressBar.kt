@@ -35,23 +35,6 @@ class SansaraProgressBar @JvmOverloads constructor(
             val circleDirection: Boolean,
             @ColorInt val circleColor: Int
         )
-
-        private fun obtainAttributes(ta: TypedArray, context: Context): Attrs {
-            val width = ta.getFloat(R.styleable.SansaraProgressBar_circleWidth, CIRCLE_WIDTH_DEFAULT)
-            val speed = ta.getFloat(R.styleable.SansaraProgressBar_circleSpeed, CIRCLE_SPEED_DEFAULT)
-            val sweep = ta.getFloat(R.styleable.SansaraProgressBar_circleSweep, CIRCLE_SWEEP_DEFAULT)
-            val count = ta.getInteger(R.styleable.SansaraProgressBar_circleCount, CIRCLE_COUNT_DEFAULT)
-            val color = ta.getColor(R.styleable.SansaraProgressBar_circleColor, context.getColor(R.color.colorAccent))
-            val dir = ta.getInt(R.styleable.SansaraProgressBar_circleDirection, 0) != 0
-            return Attrs(
-                circleColor = color,
-                circleCount = count,
-                circleDirection = dir,
-                circleSpeedDegree = speed,
-                circleWidthPercent = max(min(width, 1.0f), 0.0f),
-                circleSweep = max(min(sweep, 360f), 0f)
-            )
-        }
     }
 
     private lateinit var tick: Runnable
@@ -61,10 +44,22 @@ class SansaraProgressBar @JvmOverloads constructor(
     val attrs: Attrs
 
     init {
-        val typedArray = context.obtainStyledAttributes(
-            attrSet, R.styleable.SansaraProgressBar, defStyleAttr, defStyleRes)
-        attrs = obtainAttributes(typedArray, context)
-        typedArray.recycle()
+        context.obtainStyledAttributes(attrSet, R.styleable.SansaraProgressBar, defStyleAttr, defStyleRes).apply {
+            val width = getFloat(R.styleable.SansaraProgressBar_circleWidth, CIRCLE_WIDTH_DEFAULT)
+            val speed = getFloat(R.styleable.SansaraProgressBar_circleSpeed, CIRCLE_SPEED_DEFAULT)
+            val sweep = getFloat(R.styleable.SansaraProgressBar_circleSweep, CIRCLE_SWEEP_DEFAULT)
+            val count = getInteger(R.styleable.SansaraProgressBar_circleCount, CIRCLE_COUNT_DEFAULT)
+            val color = getColor(R.styleable.SansaraProgressBar_circleColor, context.getColor(R.color.colorAccent))
+            val dir = getInt(R.styleable.SansaraProgressBar_circleDirection, 0) != 0
+            attrs = Attrs(
+                circleColor = color,
+                circleCount = count,
+                circleDirection = dir,
+                circleSpeedDegree = speed,
+                circleWidthPercent = max(min(width, 1.0f), 0.0f),
+                circleSweep = max(min(sweep, 360f), 0f)
+            )
+        }.recycle()
 
         paint = Paint().apply {
             style = Paint.Style.STROKE
