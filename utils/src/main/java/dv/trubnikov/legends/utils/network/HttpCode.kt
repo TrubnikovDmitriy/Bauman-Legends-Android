@@ -1,20 +1,19 @@
 package dv.trubnikov.legends.utils.network
 
-enum class HttpStatusCode(val code: Int, val message: String) {
+object HttpCode {
+    const val OK            = 200
+    const val CREATED       = 201
+    const val ACCEPTED      = 202
 
-    _200(200, "OK"),
-    _201(201, "Created"),
-    _202(202, "Accepted"),
+    const val BAD_REQUEST   = 400
+    const val UNAUTHORIZED  = 401
+    const val FORBIDDEN     = 403
+    const val NOT_FOUND     = 404
 
-    _400(400, "Bad Request"),
-    _401(401, "Unauthorized"),
-    _403(403, "Forbidden"),
-    _404(404, "Not Found"),
+    const val INTERNAL_SERVER_ERROR = 500
+    const val SERVICE_UNAVAILABLE   = 503
 
-    _500(500, "Internal Server Error"),
-    _503(503, "Service Unavailable");
-
-    fun is200(): Boolean = code in 200..299
-    fun is400(): Boolean = code in 400..499
-    fun is500(): Boolean = code >= 500
+    fun Int.is2xx(): Boolean = this in 200..299
+    fun Int.is4xx(): Boolean = this in 400..499
+    fun Int.is5xx(): Boolean = this >= 500
 }
