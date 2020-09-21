@@ -11,4 +11,10 @@
             <enum name="opposite" value="1"/>
         </attr>
     </declare-styleable>
+
+    <declare-styleable name="TeamAvatarView">
+        <attr name="teamName" format="string"/>
+        <attr name="textSize" format="dimension"/>
+        <attr name="textColor" format="color"/>
+    </declare-styleable>
 </resources>
