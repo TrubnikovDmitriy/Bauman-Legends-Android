@@ -3,8 +3,10 @@ package dv.trubnikov.legends.core_credential.auth
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.security.crypto.EncryptedSharedPreferences
+import androidx.security.crypto.MasterKey
 import androidx.security.crypto.MasterKeys
 import dagger.hilt.android.qualifiers.ApplicationContext
+import dv.trubnikov.legends.core_models.auth.AuthData
 import dv.trubnikov.legends.utils.domain.Store
 import javax.inject.Inject
 
@@ -41,9 +43,9 @@ class AuthStore @Inject constructor(
 
     private fun getSharedPreferences(): SharedPreferences {
         return EncryptedSharedPreferences.create(
-            AUTH_PREFERENCES,
-            MasterKeys.getOrCreate(MasterKeys.AES256_GCM_SPEC),
             context,
+            AUTH_PREFERENCES,
+            MasterKey.Builder(context).setKeyScheme(MasterKey.KeyScheme.AES256_GCM).build(),
             EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
             EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
         )
