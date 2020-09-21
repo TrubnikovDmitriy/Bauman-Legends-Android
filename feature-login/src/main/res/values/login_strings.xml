@@ -19,6 +19,4 @@
     <string name="login_button_sign_up">Зарегистрироваться</string>
 
     <string name="fail_to_sign_in">Неверный логин или пароль</string>
-    <string name="response_401">Сначала необходимо авторизоваться</string>
-    <string name="response_5xx">Сервер не отвечает.\nПожалуйста, попробуйте позже</string>
 </resources>

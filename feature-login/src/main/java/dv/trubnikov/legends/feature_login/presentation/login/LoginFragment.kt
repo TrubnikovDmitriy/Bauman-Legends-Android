@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
-import androidx.activity.OnBackPressedDispatcher
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -13,11 +12,25 @@ import dagger.hilt.android.AndroidEntryPoint
 import dv.trubnikov.legends.feature_login.R
 import dv.trubnikov.legends.feature_login.databinding.FragmentLoginBinding
 import dv.trubnikov.legends.utils.android.hideKeyboard
+import dv.trubnikov.legends.utils.domain.appstate.AppState.NEED_NETWORK
+import dv.trubnikov.legends.utils.domain.appstate.AppStateCenter
+import dv.trubnikov.legends.utils.domain.appstate.AppStateResolver
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class LoginFragment : Fragment() {
 
+    @Inject lateinit var stateCenter: AppStateCenter
+    @Inject lateinit var stateResolver: AppStateResolver
     private val viewModel: LoginViewModel by viewModels()
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        stateCenter.getEvents().observe(this) { event -> when {
+            event has NEED_NETWORK -> stateResolver.navigationForState(NEED_NETWORK)
+        }}
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -32,6 +45,7 @@ class LoginFragment : Fragment() {
 
         return binding.root
     }
+
 
     private fun setUpClickListeners(binding: FragmentLoginBinding) {
         binding.buttonSignIn.setOnClickListener {

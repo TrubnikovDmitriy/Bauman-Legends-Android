@@ -11,11 +11,25 @@ import dagger.hilt.android.AndroidEntryPoint
 import dv.trubnikov.legends.feature_login.R
 import dv.trubnikov.legends.feature_login.databinding.FragmentRegistrationBinding
 import dv.trubnikov.legends.utils.android.hideKeyboard
+import dv.trubnikov.legends.utils.domain.appstate.AppState
+import dv.trubnikov.legends.utils.domain.appstate.AppStateCenter
+import dv.trubnikov.legends.utils.domain.appstate.AppStateResolver
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class RegistrationFragment : Fragment() {
 
+    @Inject lateinit var stateCenter: AppStateCenter
+    @Inject lateinit var stateResolver: AppStateResolver
     private val viewModel: RegistrationViewModel by viewModels()
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        stateCenter.getEvents().observe(this) { event -> when {
+            event has AppState.NEED_NETWORK -> stateResolver.navigationForState(AppState.NEED_NETWORK)
+        }}
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
