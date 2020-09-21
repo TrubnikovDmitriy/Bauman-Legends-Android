@@ -2,4 +2,8 @@
     <string name="title_task">Задание</string>
     <string name="title_team">Команда</string>
     <string name="title_info">Инфо</string>
+    
+    <string name="auth_need_error">Необходимо зарегистрироваться</string>
+    <string name="team_need_error">Для прохождения Легенд необходима команда</string>
+    <string name="network_need_error">Проверьте интернет-соединение</string>
 </resources>
