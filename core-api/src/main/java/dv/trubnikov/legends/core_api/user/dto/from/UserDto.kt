@@ -12,6 +12,7 @@ data class UserDto(
     @SerializedName("last_name") val lastName: String?,
     @SerializedName("first_name") val firstName: String?,
     @SerializedName("group") val studyGroup: String?,
+    @SerializedName("team_id") val teamId: Long?,
 ) {
     fun convert(): UserData? {
         return UserData(
@@ -20,7 +21,8 @@ data class UserDto(
             lastName = lastName ?: return null,
             firstName = firstName ?: return null,
             studyGroup = studyGroup ?: return null,
-            role = safetyValueOf<UserRole>(role) ?: return null
+            role = safetyValueOf<UserRole>(role) ?: return null,
+            teamId = teamId
         )
     }
 }

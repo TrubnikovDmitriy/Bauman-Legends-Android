@@ -12,6 +12,9 @@ interface TeamApi {
     @GET("team/info")
     suspend fun teamInfo(): Response<TeamDto>
 
+    @POST("team/update")
+    suspend fun renameTeam(@Body dto: CreateTeamDto): Response<TeamDto>
+
     @GET("team/all")
     suspend fun allTeams(): Response<List<TeamDto>>
 
