@@ -6,6 +6,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ApplicationComponent
 import dv.trubnikov.legends.core_network.cookie.CookieController
 import dv.trubnikov.legends.core_network.cookie.CookieStore
+import dv.trubnikov.legends.core_network.interceptors.AuthInterceptor
 import okhttp3.CookieJar
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -17,7 +18,7 @@ import javax.inject.Singleton
 @InstallIn(ApplicationComponent::class)
 object NetworkModule {
 
-    private const val BACKEND_URL = "http://161.35.203.109:8080"
+    private const val BACKEND_URL = "http://testing.legends.bmstu.ru"
 
     @Provides
     internal fun provideCookieController(cookieStore: CookieStore): CookieJar {
@@ -29,6 +30,7 @@ object NetworkModule {
     fun provideOkHttpClient(cookieController: CookieJar): OkHttpClient {
         return OkHttpClient.Builder()
             .cookieJar(cookieController)
+            .addInterceptor(AuthInterceptor())
             .addNetworkInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
             .build()
     }

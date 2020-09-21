@@ -1,3 +1,5 @@
 package dv.trubnikov.legends.utils.exceptions
 
-class AuthRequiredException : Exception()
+import java.io.IOException
+
+class AuthRequiredException(url: String) : IOException(url)
