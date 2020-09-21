@@ -4,6 +4,7 @@ import android.util.Log
 
 private const val TAG = "Legends"
 
+fun loge(message: String, err: Throwable): Int = Log.e(TAG, constructMessage(message), err)
 fun loge(message: String): Int = Log.e(TAG, constructMessage(message))
 fun logw(message: String): Int = Log.w(TAG, constructMessage(message))
 fun logi(message: String): Int = Log.i(TAG, constructMessage(message))

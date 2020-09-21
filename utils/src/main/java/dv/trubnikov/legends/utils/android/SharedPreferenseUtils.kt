@@ -17,3 +17,11 @@ fun SharedPreferences.getLong(key: String): Long? {
         return null
     }
 }
+
+fun SharedPreferences.Editor.putLong(key: String, value: Long?) {
+    if (value != null) {
+        putLong(key, value)
+    } else {
+        remove(key)
+    }
+}

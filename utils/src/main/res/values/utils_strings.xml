@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="parse_error">Ой-ёй, непонятная ошибочка</string>
+    <string name="response_null">Сервер ответил что-то невразумительное ¯\_(ツ)_/¯</string>
+    <string name="response_401">Сначала необходимо авторизоваться</string>
+    <string name="response_5xx">Сервер не отвечает.\nПожалуйста, попробуйте позже</string>
+    <string name="response_unknown">Произошло что-то странное…\nСвяжитесь, пожалуйста, с администрацией Легенд</string>
+</resources>
