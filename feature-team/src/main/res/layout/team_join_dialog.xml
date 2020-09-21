@@ -8,7 +8,7 @@
     android:background="@drawable/rounded_dialog"
     android:padding="@dimen/container_padding"
     tools:layout_height="200dp"
-    tools:context=".presentation.create.TeamCreateDialog">
+    tools:context=".presentation.join.TeamJoinDialog">
 
     <TextView
         style="@style/TextAppearance.AppCompat.Title"
@@ -16,23 +16,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/container_padding"
-        android:text="@string/creating_description"/>
+        android:text="@string/joining_description"/>
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:id="@+id/team_name"
+        android:id="@+id/invite_code"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="@dimen/container_padding"
         app:errorEnabled="true"
         app:counterEnabled="true"
         app:counterMaxLength="25"
-        android:hint="@string/creating_hint">
+        android:hint="@string/joining_hint">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textCapWords" />
+            android:inputType="text"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <RelativeLayout
@@ -45,12 +45,12 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="12dp"
             android:layout_toStartOf="@id/create_button"
-            android:text="@string/creating_cancel_button" />
+            android:text="@string/joining_cancel_button" />
         <com.google.android.material.button.MaterialButton
             android:id="@+id/create_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:text="@string/creating_apply_button" />
+            android:text="@string/joining_apply_button" />
     </RelativeLayout>
 </LinearLayout>

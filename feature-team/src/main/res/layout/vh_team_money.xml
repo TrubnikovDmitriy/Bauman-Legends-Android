@@ -16,7 +16,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/profile_code_icon" />
+        android:src="@drawable/icon_profile_code" />
 
     <TextView
         android:id="@+id/primary_text"

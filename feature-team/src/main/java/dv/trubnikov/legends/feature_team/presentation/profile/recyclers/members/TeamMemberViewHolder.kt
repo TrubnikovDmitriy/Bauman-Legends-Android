@@ -1,4 +1,4 @@
-package dv.trubnikov.legends.feature_team.presentation.screens.profile.recyclers.members
+package dv.trubnikov.legends.feature_team.presentation.profile.recyclers.members
 
 import androidx.recyclerview.widget.RecyclerView
 import dv.trubnikov.legends.core_models.user.UserData

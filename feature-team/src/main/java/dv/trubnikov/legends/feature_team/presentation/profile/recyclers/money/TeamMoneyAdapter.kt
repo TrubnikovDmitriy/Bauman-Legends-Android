@@ -1,11 +1,11 @@
-package dv.trubnikov.legends.feature_team.presentation.screens.profile.recyclers.money
+package dv.trubnikov.legends.feature_team.presentation.profile.recyclers.money
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import dv.trubnikov.legends.feature_team.presentation.screens.profile.recyclers.money.TeamMoneyViewHolderType.*
+import dv.trubnikov.legends.feature_team.presentation.profile.recyclers.money.TeamMoneyViewHolderType.*
 
 
-class TeamProfileAdapter : RecyclerView.Adapter<TeamMoneyViewHolder>() {
+class TeamMoneyAdapter : RecyclerView.Adapter<TeamMoneyViewHolder>() {
 
     private var infoPositions = HashSet<Int>()
     private var teamData: List<TeamMoneyRecyclerData> = emptyList()

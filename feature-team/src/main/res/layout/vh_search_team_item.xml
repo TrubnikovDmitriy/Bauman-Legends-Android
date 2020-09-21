@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?selectableItemBackground"
+    android:background="@color/colorSecondaryLight"
+    android:padding="@dimen/container_padding">
+
+    <dv.trubnikov.legends.core_ui.TeamAvatarView
+        android:id="@+id/team_avatar"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:src="@color/colorPrimary"
+        app:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpUsage" />
+
+    <TextView
+        android:id="@+id/team_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:textColor="@color/colorSecondaryText"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/team_score"
+        app:layout_constraintStart_toEndOf="@+id/team_avatar"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Песчаный шторм" />
+
+    <TextView
+        android:id="@+id/team_size"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/team_name"
+        app:layout_constraintTop_toBottomOf="@id/team_name"
+        tools:text="5 человек" />
+
+
+    <TextView
+        android:id="@+id/team_score"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="300 баллов" />
+
+    <ImageView
+        android:id="@+id/info"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/icon_search_coin"
+        app:layout_constraintBottom_toTopOf="@+id/team_score"
+        app:layout_constraintEnd_toEndOf="@+id/team_score"
+        app:layout_constraintStart_toStartOf="@+id/team_score"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        tools:viewBindingIgnore="true" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

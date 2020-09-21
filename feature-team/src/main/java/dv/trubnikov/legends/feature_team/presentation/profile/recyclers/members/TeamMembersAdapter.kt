@@ -1,4 +1,4 @@
-package dv.trubnikov.legends.feature_team.presentation.screens.profile.recyclers.members
+package dv.trubnikov.legends.feature_team.presentation.profile.recyclers.members
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -13,8 +13,8 @@ class TeamMembersAdapter : RecyclerView.Adapter<TeamMemberViewHolder>() {
     private var data: List<UserData> = emptyList()
 
     fun setMembers(newData: List<UserData>) {
-        data = newData
         val diffResult = DiffUtil.calculateDiff(SillyDiffUtilsCallback(data, newData))
+        data = newData
         diffResult.dispatchUpdatesTo(this)
     }
 

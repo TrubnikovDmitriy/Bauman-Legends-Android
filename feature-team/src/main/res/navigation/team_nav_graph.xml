@@ -3,24 +3,92 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/team_nav_graph"
-    app:startDestination="@id/teamProfileFragment"
+    app:startDestination="@id/team_profile_fragment"
     tools:ignore="UnusedNavigation">
 
     <fragment
         android:id="@+id/team_onboarding_fragment"
-        android:name="dv.trubnikov.legends.feature_team.presentation.screens.onboarding.TeamOnBoardingFragment"
+        android:name="dv.trubnikov.legends.feature_team.presentation.onboarding.TeamOnBoardingFragment"
         android:label="@string/nav_label_profile_team"
-        tools:layout="@layout/team_onboarding_fragment" />
+        tools:layout="@layout/team_onboarding_fragment" >
+        <action
+            android:id="@+id/action_team_onboarding_fragment_to_team_create_dialog"
+            app:destination="@id/team_create_dialog" />
+        <action
+            android:id="@+id/action_team_onboarding_fragment_to_team_search_fragment"
+            app:destination="@id/team_search_fragment"
+            app:popUpTo="@id/team_nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
 
     <dialog
         android:id="@+id/team_create_dialog"
-        android:name="dv.trubnikov.legends.feature_team.presentation.screens.create.TeamCreateDialog"
+        android:name="dv.trubnikov.legends.feature_team.presentation.create.TeamCreateDialog"
         android:label="team_create_dialog"
-        tools:layout="@layout/team_create_dialog" />
+        tools:layout="@layout/team_create_dialog" >
+        <action
+            android:id="@+id/action_team_create_dialog_to_team_profile_fragment"
+            app:destination="@id/team_profile_fragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/team_nav_graph"
+            app:popUpToInclusive="true">
+            <argument
+                android:name="team_data"
+                app:argType="dv.trubnikov.legends.core_models.team.TeamData"
+                app:nullable="false" />
+        </action>
+    </dialog>
 
     <fragment
-        android:id="@+id/teamProfileFragment"
-        android:name="dv.trubnikov.legends.feature_team.presentation.screens.profile.TeamProfileFragment"
-        android:label="@string/nav_label_profile_team" />
+        android:id="@+id/team_profile_fragment"
+        android:name="dv.trubnikov.legends.feature_team.presentation.profile.TeamProfileFragment"
+        android:label="@string/nav_label_profile_team"
+        tools:layout="@layout/team_profile_fragment" >
+        <action
+            android:id="@+id/action_team_profile_fragment_to_team_onboarding_fragment"
+            app:destination="@id/team_onboarding_fragment"
+            app:popUpTo="@id/team_nav_graph"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="team_data"
+            app:argType="dv.trubnikov.legends.core_models.team.TeamData"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/team_search_fragment"
+        android:name="dv.trubnikov.legends.feature_team.presentation.search.TeamSearchFragment"
+        android:label="@string/nav_label_search_team"
+        tools:layout="@layout/team_search_fragment" >
+        <action
+            android:id="@+id/action_team_search_fragment_to_team_join_dialog"
+            app:destination="@id/team_join_dialog" >
+            <argument
+                android:name="team_id"
+                app:argType="long" />
+        </action>
+    </fragment>
+
+    <dialog
+        android:id="@+id/team_join_dialog"
+        android:name="dv.trubnikov.legends.feature_team.presentation.join.TeamJoinDialog"
+        android:label="team_join_dialog"
+        tools:layout="@layout/team_join_dialog" >
+        <action
+            android:id="@+id/action_team_join_dialog_to_team_profile_fragment"
+            app:destination="@id/team_profile_fragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/team_nav_graph"
+            app:popUpToInclusive="true">
+            <argument
+                android:name="team_data"
+                app:argType="dv.trubnikov.legends.core_models.team.TeamData"
+                app:nullable="false" />
+        </action>
+        <argument
+            android:name="team_id"
+            app:argType="long" />
+    </dialog>
 
 </navigation>

@@ -1,4 +1,4 @@
-package dv.trubnikov.legends.feature_team.presentation.screens.profile.recyclers.money
+package dv.trubnikov.legends.feature_team.presentation.profile.recyclers.money
 
 import android.content.ClipData
 import android.content.Context
@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import dv.trubnikov.legends.feature_team.R
 import dv.trubnikov.legends.feature_team.databinding.VhTeamInfoBinding
 import dv.trubnikov.legends.feature_team.databinding.VhTeamMoneyBinding
-import dv.trubnikov.legends.feature_team.presentation.screens.profile.recyclers.money.TeamMoneyViewHolderType.*
+import dv.trubnikov.legends.feature_team.presentation.profile.recyclers.money.TeamMoneyViewHolderType.*
 import dv.trubnikov.legends.utils.android.clipboardManager
 import dv.trubnikov.legends.utils.android.layoutInflater
 

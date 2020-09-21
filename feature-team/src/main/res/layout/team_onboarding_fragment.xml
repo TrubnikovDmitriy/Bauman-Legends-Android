@@ -6,17 +6,17 @@
     android:layout_height="match_parent"
     android:background="@color/colorSecondary"
     android:orientation="vertical"
-    tools:context=".presentation.screens.onboarding.TeamOnBoardingFragment">
+    tools:context=".presentation.onboarding.TeamOnBoardingFragment">
 
     <TextView
         style="@style/LegendsTextStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginBottom="@dimen/container_padding"
-        android:layout_marginHorizontal="32dp"
-        android:text="@string/onboarding_you_are_alone_label"
-        android:background="@drawable/button_background" />
+        android:background="@drawable/button_background"
+        android:text="@string/onboarding_you_are_alone_label" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_create_team"
@@ -31,6 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawablePadding="6dp"
+            android:gravity="center"
             android:text="@string/onboarding_create_label"
             android:textColor="@color/colorSecondaryText"
             app:drawableEndCompat="@drawable/ic_create"

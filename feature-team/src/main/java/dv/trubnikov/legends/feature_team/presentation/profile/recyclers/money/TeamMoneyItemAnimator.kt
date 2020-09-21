@@ -1,4 +1,4 @@
-package dv.trubnikov.legends.feature_team.presentation.screens.profile.recyclers.money
+package dv.trubnikov.legends.feature_team.presentation.profile.recyclers.money
 
 import android.animation.Animator
 import android.animation.AnimatorInflater
@@ -7,7 +7,7 @@ import androidx.core.animation.doOnEnd
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import dv.trubnikov.legends.feature_team.R
-import dv.trubnikov.legends.feature_team.presentation.screens.profile.recyclers.money.TeamMoneyViewHolderType.INFORMATION
+import dv.trubnikov.legends.feature_team.presentation.profile.recyclers.money.TeamMoneyViewHolderType.INFORMATION
 import dv.trubnikov.legends.utils.android.logv
 
 class TeamMoneyItemAnimator(private val context: Context) : DefaultItemAnimator() {
