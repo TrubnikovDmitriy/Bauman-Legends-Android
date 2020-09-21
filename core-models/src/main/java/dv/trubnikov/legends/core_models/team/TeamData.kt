@@ -1,5 +1,9 @@
 package dv.trubnikov.legends.core_models.team
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
 data class TeamData(
     val teamId: Long,
     val teamName: String,
@@ -8,4 +12,4 @@ data class TeamData(
     val score: Int,
     val size: Int,
     val inviteCode: String?
-)
+) : Parcelable
