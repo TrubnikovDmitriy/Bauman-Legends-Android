@@ -24,11 +24,11 @@
                 android:gravity="center_horizontal"
                 android:orientation="vertical"
                 android:padding="@dimen/container_padding">
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center_vertical">
-
+                    android:gravity="center"
+                    android:orientation="vertical">
                     <dv.trubnikov.legends.core_ui.TeamAvatarView
                         android:id="@+id/team_avatar"
                         android:layout_width="120dp"
@@ -38,7 +38,6 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:teamName="42"
                         app:textSize="60dp"
                         tools:ignore="SpUsage" />
 
@@ -46,30 +45,16 @@
                         android:id="@+id/teamName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginVertical="6dp"
-                        android:gravity="center_vertical"
-                        android:text="@string/lorem_1"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
                         android:textColor="@color/colorSecondaryText"
                         android:textSize="25sp"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="@id/team_avatar"
                         app:layout_constraintStart_toStartOf="@+id/team_avatar"
-                        app:layout_constraintTop_toBottomOf="@id/team_avatar" />
-
-                    <ImageView
-                        android:id="@+id/button_edit_title"
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        android:alpha="0.2"
-                        android:padding="4dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/ic_edit"
-                        app:layout_constraintBottom_toBottomOf="@+id/teamName"
-                        app:layout_constraintDimensionRatio="1:1"
-                        app:layout_constraintStart_toEndOf="@+id/teamName"
-                        app:layout_constraintTop_toTopOf="@+id/teamName"
-                        tools:ignore="ContentDescription" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                        app:layout_constraintTop_toBottomOf="@id/team_avatar"
+                        tools:text="@string/lorem_1" />
+                </LinearLayout>
             </com.google.android.material.circularreveal.CircularRevealLinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView

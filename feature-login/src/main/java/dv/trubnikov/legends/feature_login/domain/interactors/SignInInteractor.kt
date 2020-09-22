@@ -7,6 +7,7 @@ import dv.trubnikov.legends.core_models.user.UserData
 import dv.trubnikov.legends.feature_login.domain.LoginRepository
 import dv.trubnikov.legends.utils.domain.Result
 import dv.trubnikov.legends.utils.domain.appstate.AppState.NEED_AUTH
+import dv.trubnikov.legends.utils.domain.appstate.AppState.NEED_TEAM
 import dv.trubnikov.legends.utils.domain.appstate.AppStateCenter
 import javax.inject.Inject
 
@@ -21,6 +22,9 @@ class SignInInteractor @Inject constructor(
         when(result) {
             is Result.Success -> {
                 stateCenter.removeState(NEED_AUTH)
+                if (result.data.teamId == null) {
+                    stateCenter.addState(NEED_TEAM)
+                }
                 authStore.value = AuthData(login, password)
                 userStore.value = result.data
             }

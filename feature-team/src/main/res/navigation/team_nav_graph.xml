@@ -16,9 +16,7 @@
             app:destination="@id/team_create_dialog" />
         <action
             android:id="@+id/action_team_onboarding_fragment_to_team_search_fragment"
-            app:destination="@id/team_search_fragment"
-            app:popUpTo="@id/team_nav_graph"
-            app:popUpToInclusive="true" />
+            app:destination="@id/team_search_fragment" />
     </fragment>
 
     <dialog
