@@ -18,7 +18,7 @@ import javax.inject.Singleton
 @InstallIn(ApplicationComponent::class)
 object NetworkModule {
 
-    private const val BACKEND_URL = "http://testing.legends.bmstu.ru"
+    private const val BACKEND_URL = "https://testing.legends.bmstu.ru"
 
     @Provides
     internal fun provideCookieController(cookieStore: CookieStore): CookieJar {
